@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="ItensPatrimonio.asmx.cs" Class="Prototipo3C_WS.Itens" %>
