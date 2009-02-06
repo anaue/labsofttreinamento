@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo_Workspace.dll", "Prototipo_Workspace.dll\Prototipo_Workspace.dll.csproj", "{6EFF89CB-BCEC-476A-9FA0-9E94CDCBD350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo_User", "Prototipo_User\Prototipo_User.csproj", "{1645B48A-6910-48CB-9826-EAE0350F24BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototipo_Entidade.dll", "Prototipo_Entidade.dll\Prototipo_Entidade.dll.csproj", "{68E73357-31A3-473B-8904-3A2674914AE8}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EFF89CB-BCEC-476A-9FA0-9E94CDCBD350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EFF89CB-BCEC-476A-9FA0-9E94CDCBD350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EFF89CB-BCEC-476A-9FA0-9E94CDCBD350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EFF89CB-BCEC-476A-9FA0-9E94CDCBD350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1645B48A-6910-48CB-9826-EAE0350F24BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1645B48A-6910-48CB-9826-EAE0350F24BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1645B48A-6910-48CB-9826-EAE0350F24BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1645B48A-6910-48CB-9826-EAE0350F24BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E73357-31A3-473B-8904-3A2674914AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E73357-31A3-473B-8904-3A2674914AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E73357-31A3-473B-8904-3A2674914AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E73357-31A3-473B-8904-3A2674914AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
