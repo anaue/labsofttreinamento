@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.pece.org.br/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.pece.org.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.pece.org.br/">
+      <s:element name="IncluirRegistro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Item" nillable="true" type="tns:Request" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Request">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ColecaoObjetos" type="tns:ArrayOfObjeto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjeto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Objeto" nillable="true" type="tns:Objeto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Objeto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ObjId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Campo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IncluirRegistroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Msg_Resposta" nillable="true" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Response">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Cod_status" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Msg_erro" nillable="true" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ColecaoObjetos" nillable="true" type="tns:ArrayOfObjeto" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterRegistros">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObterRegistrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Msg_Resposta" nillable="true" type="tns:Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IncluirRegistroSoapIn">
+    <wsdl:part name="parameters" element="tns:IncluirRegistro" />
+  </wsdl:message>
+  <wsdl:message name="IncluirRegistroSoapOut">
+    <wsdl:part name="parameters" element="tns:IncluirRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterRegistrosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterRegistros" />
+  </wsdl:message>
+  <wsdl:message name="ObterRegistrosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterRegistrosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ItensSoap">
+    <wsdl:operation name="IncluirResgistro">
+      <wsdl:input name="IncluirRegistro" message="tns:IncluirRegistroSoapIn" />
+      <wsdl:output name="IncluirRegistro" message="tns:IncluirRegistroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterRegistros">
+      <wsdl:input message="tns:ObterRegistrosSoapIn" />
+      <wsdl:output message="tns:ObterRegistrosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ItensSoap" type="tns:ItensSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IncluirResgistro">
+      <soap:operation soapAction="http://www.pece.org.br/IncluirRegistro" style="document" />
+      <wsdl:input name="IncluirRegistro">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IncluirRegistro">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterRegistros">
+      <soap:operation soapAction="http://www.pece.org.br/ObterRegistros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ItensSoap12" type="tns:ItensSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IncluirResgistro">
+      <soap12:operation soapAction="http://www.pece.org.br/IncluirRegistro" style="document" />
+      <wsdl:input name="IncluirRegistro">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IncluirRegistro">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterRegistros">
+      <soap12:operation soapAction="http://www.pece.org.br/ObterRegistros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Itens">
+    <wsdl:port name="ItensSoap" binding="tns:ItensSoap">
+      <soap:address location="http://localhost:3888/ItensPatrimonio.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ItensSoap12" binding="tns:ItensSoap12">
+      <soap12:address location="http://localhost:3888/ItensPatrimonio.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
