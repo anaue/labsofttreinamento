@@ -1,0 +1,1 @@
+Projeto criado para treinamento inicial nas ferramentas a serem utilizadas no disciplina laboratório de engenharia de software 2 da escola politécnica da USP Curso Cooperativo de engenharia de computação. Turma 2009-sexta.
